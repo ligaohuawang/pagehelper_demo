@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lgh.mapper.IUserMapper">
+    <resultMap id="BaseResultMap" type="com.lgh.entity.User">
+        <id column="uid" jdbcType="INTEGER" property="uid"/>
+        <result column="nicknane" jdbcType="VARCHAR" property="nicknane"/>
+        <result column="uname" jdbcType="VARCHAR" property="uname"/>
+        <result column="uemail" jdbcType="VARCHAR" property="uemail"/>
+        <result column="uphone" jdbcType="VARCHAR" property="uphone"/>
+        <result column="ucard" jdbcType="VARCHAR" property="ucard"/>
+        <result column="usex" jdbcType="INTEGER" property="usex"/>
+        <result column="ucity" jdbcType="VARCHAR" property="ucity"/>
+        <result column="ubirthday" jdbcType="DATE" property="ubirthday"/>
+        <result column="upicture" jdbcType="VARCHAR" property="upicture"/>
+        <result column="upassword" jdbcType="VARCHAR" property="upassword"/>
+    </resultMap>
+    <!--sql片段-->
+    <sql id="Base_Column_List">
+    uid, nicknane, uname, uemail, uphone, ucard, usex, ucity, ubirthday, upicture, upassword
+  </sql>
+    <select id="selectList" resultType="com.lgh.entity.User">
+    select * from t_user
+    </select>
+</mapper>
